@@ -14,6 +14,7 @@
   --middle-grey: rgba(255, 255, 255, 0.6);
   --almost-grey: #ececec;
   --for-border: #eeeeee;
+  --icon-border: #afb1b8;
 }
 body {
   width: 1600px;
@@ -83,7 +84,7 @@ header {
   text-decoration: none;
   font-size: 14px;
   line-height: 1.14;
-  color: var(--brand-color);
+  color: var(--light-grey);
 }
 .phonenumber {
   text-decoration: none;
@@ -147,6 +148,16 @@ header {
   padding-top: 94px;
   padding-left: 0;
   gap: 30px;
+}
+.article-box {
+  max-width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--almost-white);
+  background-image: url("https://res.cloudinary.com/goit-academy/image/upload/v1614773221/codepen/cat_segyum.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .article-title {
   margin: 0;
@@ -229,6 +240,24 @@ header {
   margin: 0 auto;
   padding-bottom: 30px;
 }
+.clients-box {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+  justify-content: space-around;
+  gap: 30px;
+  padding-left: 0;
+  border-radius: 4px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.client {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-border);
+  border-radius: 4px;
+}
 /*portfolio*/
 .container {
   max-width: 1200px;
@@ -251,32 +280,9 @@ header {
   padding-bottom: 34px;
 }
 
-.portfolio-main-button {
-  align-items: center;
-  margin: auto;
-  background-color: var(--brand-color);
-  border: var(--brand-color);
-  border-radius: 4px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: var(--total-white);
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-.portfolio-main-button:hover,
-.portfolio-main-button:focus,
-.portfolio-main-button:active {
-  color: var(--brand-color);
-  background-color: var(--total-white);
-}
 .portfolio-button {
   align-items: center;
   margin: auto;
-
   background-color: var(--almost-white);
   border: var(--brand-color);
   border-radius: 4px;
@@ -284,7 +290,6 @@ header {
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
-
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
@@ -292,8 +297,12 @@ header {
 .portfolio-button:hover,
 .portfolio-button:focus,
 .portfolio-button:active {
-  color: var(--brand-color);
+  color: var(--total-white);
+  background-color: var(--brand-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
 .all-projects {
   display: flex;
   max-width: 100%;
@@ -307,6 +316,12 @@ header {
 .project {
   display: block;
   margin: 0 auto;
+}
+.project:hover,
+.project:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 .all-projects .project {
   background-color: var(--total-white);
