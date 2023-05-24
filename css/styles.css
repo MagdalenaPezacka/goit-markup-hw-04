@@ -15,6 +15,7 @@
   --almost-grey: #ececec;
   --for-border: #eeeeee;
   --icon-border: #afb1b8;
+  --footer-icon: rgba(255, 255, 255, 0.1);
 }
 body {
   width: 1600px;
@@ -79,13 +80,42 @@ header {
 }
 .contacts {
   display: flex;
-  justify-content: right;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+/*moje stare  width: 321px;
+  height: 16px;
+  margin-left: 0;
+  padding-left: 0;
+
+.contacts > .header-contact-item {
+  display: list-item;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}}*/
+.envelope-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.envelope-icon:hover,
+.envelope-icon:focus {
+  color: var(--brand-color);
+  cursor: pointer;
 }
 .email-link {
   text-decoration: none;
   font-size: 14px;
   line-height: 1.14;
   color: var(--light-grey);
+}
+.email-link:hover,
+.email-link:focus {
+  color: var(--brand-color);
+  cursor: pointer;
 }
 .phonenumber {
   text-decoration: none;
@@ -94,26 +124,37 @@ header {
   color: var(--light-grey);
   margin-left: 50px;
 }
-.email-link:hover,
-.email-link:focus,
-.email-link:active {
-  color: var(--brand-color);
+.phone-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 .phonenumber:hover,
 .phonenumber:focus,
 .phonenumber:active {
   color: var(--brand-color);
+  cursor: pointer;
+}
+.phone-icon:hover,
+.phone-icon:focus {
+  color: var(--brand-color);
+  cursor: pointer;
 }
 /*main*/
 
 .sitetitle {
-  display: block;
-  width: 1600px;
-  height: 600px;
   background-color: var(--dark-grey);
-  margin: 0 auto;
-  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+  margin-bottom: 94px;
+  background-image: url(../images/studio.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 600px;
 }
+
 .title {
   margin: auto;
   padding: 200px 452px 30px 452px;
@@ -242,28 +283,33 @@ header {
 }
 .socials-box {
   display: flex;
-  width: 206px;
-  height: 44px;
-  margin: 0 auto;
-  padding: 0;
+  margin: auto;
+  margin-bottom: 18px;
+  padding-bottom: 0;
+  max-width: 206px;
+  max-height: 56px;
   justify-content: space-around;
   gap: 10px;
 }
-.socialmedia {
+.social-icons {
   width: 44px;
   height: 44px;
-  padding: 12px;
+  border-radius: 50%;
+}
+.socialmedia {
+  margin: 12px;
   fill: var(--icon-border);
 }
-.socialmedia:hover,
-.socialmedia:focus {
-  fill: var(--total-white);
+.social-icons:hover,
+.social-icons:focus {
   background-color: var(--brand-color);
-
-  border-radius: 45%;
-  -webkit-border-radius: 45%;
   cursor: pointer;
 }
+.social-icons:hover > .socialmedia,
+.social-icons:focus > .socialmedia {
+  fill: var(--total-white);
+}
+
 .clients-box {
   display: flex;
   margin: 0 auto;
@@ -381,15 +427,15 @@ header {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 20px;
-
   margin: 0;
 }
 
 /*footer*/
 footer {
+  display: block;
   width: 1600px;
-
   height: 252px;
+  padding: 0;
   background-color: var(--dark-grey);
 }
 .foot-container {
@@ -397,6 +443,10 @@ footer {
   margin: 0 auto;
   padding-left: 5px;
   display: block;
+}
+.footer-first-block {
+  display: inline-block;
+  margin-right: 70px;
 }
 .footermainpagefont {
   font-family: "Raleway";
@@ -406,6 +456,7 @@ footer {
   color: var(--total-white);
   padding-top: 60px;
   padding-bottom: 20px;
+  margin-right: 70px;
 }
 .company-address {
   font-style: normal;
@@ -440,4 +491,45 @@ footer {
 .footer-phonenumber:focus,
 .footer-phonenumber:active {
   color: var(--brand-color);
+}
+.footer-second-block {
+  display: inline-block;
+  margin: 0 auto;
+  width: 206px;
+  height: 80px;
+}
+.footer-join-us {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: var(--total-white);
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.footer-socials-box {
+  display: flex;
+  margin: auto;
+  padding: 0;
+  justify-content: space-around;
+  gap: 10px;
+}
+.footer-social-icons {
+  width: 44px;
+  height: 44px;
+  background-color: var(--footer-icon);
+  border-radius: 50%;
+}
+.footer-socialmedia {
+  margin: 12px;
+  fill: var(--total-white);
+}
+.footer-social-icons:hover,
+.footer-social-icons:focus {
+  background-color: var(--brand-color);
+  cursor: pointer;
+}
+.footer-social-icons:hover > .footer-socialmedia,
+.footer-social-icons:focus > .footer-socialmedia {
+  fill: var(--total-white);
 }
