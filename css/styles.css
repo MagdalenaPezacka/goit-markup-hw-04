@@ -16,6 +16,7 @@
   --for-border: #eeeeee;
   --icon-border: #afb1b8;
   --footer-icon: rgba(255, 255, 255, 0.1);
+  --shade: rgba(47, 48, 58, 0.4);
 }
 body {
   width: 1600px;
@@ -82,8 +83,9 @@ header {
   display: flex;
   padding: 0;
   margin: 0;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  gap: 30px;
 }
 /*moje stare  width: 321px;
   height: 16px;
@@ -91,12 +93,13 @@ header {
   padding-left: 0;
 
 .contacts > .header-contact-item {
-  display: list-item;
+  width: 161px;
+  height: 16px;
   justify-content: space-around;
   margin: 0;
   padding: 0;
   gap: 30px;
-}}*/
+}*/
 .envelope-icon {
   margin-right: 10px;
   fill: currentColor;
@@ -107,10 +110,15 @@ header {
   cursor: pointer;
 }
 .email-link {
+  display: flex;
   text-decoration: none;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   color: var(--light-grey);
+  letter-spacing: 0.02em;
+  width: 161px;
+  height: 16px;
 }
 .email-link:hover,
 .email-link:focus {
@@ -118,11 +126,16 @@ header {
   cursor: pointer;
 }
 .phonenumber {
+  display: flex;
+  flex-wrap: nowrap;
   text-decoration: none;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   color: var(--light-grey);
-  margin-left: 50px;
+  letter-spacing: 0.02em;
+  width: 130px;
+  height: 16px;
 }
 .phone-icon {
   margin-right: 10px;
@@ -143,18 +156,27 @@ header {
 
 .sitetitle {
   background-color: var(--dark-grey);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 200px;
-  margin-bottom: 94px;
+
   background-image: url(../images/studio.jpg);
   background-position: center;
   background-size: cover;
-  min-height: 600px;
+  height: 600px;
 }
+.sitetitle-shade {
+  width: 100%;
 
+  background-color: var(--shade);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 200px;
+
+  height: 600px;
+}
 .title {
   margin: auto;
   padding: 200px 452px 30px 452px;
@@ -433,16 +455,18 @@ header {
 /*footer*/
 footer {
   display: block;
+  background-color: var(--dark-grey);
   width: 1600px;
   height: 252px;
   padding: 0;
-  background-color: var(--dark-grey);
 }
 .foot-container {
   width: 1200px;
   margin: 0 auto;
   padding-left: 5px;
-  display: block;
+}
+.footer-blocks {
+  display: flex;
 }
 .footer-first-block {
   display: inline-block;
@@ -494,7 +518,7 @@ footer {
 }
 .footer-second-block {
   display: inline-block;
-  margin: 0 auto;
+  margin-top: 72px;
   width: 206px;
   height: 80px;
 }
